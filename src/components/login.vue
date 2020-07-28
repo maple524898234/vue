@@ -30,6 +30,8 @@ export default{
 	},
 	methods:{
 		onsubmit:function(){
+			this.$router.push('home')
+			return false
 			if(this.username.length>=5 && this.pwd.length>=5){
 				this.$axios.post('/passport/api/user/userLogin', {
 				    'username': this.username,
